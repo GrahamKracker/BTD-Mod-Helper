@@ -106,7 +106,7 @@ public static ObjectId GetId(this Bloon bloon);
 
 ## BloonExt.GetUnityDisplayNode(this Bloon) Method
 
-Return the UnityDisplayNode for this bloon. Is apart of DisplayNode. Needed to modify sprites
+Return the UnityDisplayNode for this bloon. Is a part of DisplayNode. Needed to modify sprites
 
 ```csharp
 public static UnityDisplayNode GetUnityDisplayNode(this Bloon bloon);

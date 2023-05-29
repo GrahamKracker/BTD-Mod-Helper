@@ -10,9 +10,6 @@ public abstract class ModVanillaTower : BTD_Mod_Helper.Api.Towers.ModVanillaCont
 ```
 
 Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; [ModContent](BTD_Mod_Helper.Api.ModContent.md 'BTD_Mod_Helper.Api.ModContent') &#129106; [ModVanillaContent](BTD_Mod_Helper.Api.Towers.ModVanillaContent.md 'BTD_Mod_Helper.Api.Towers.ModVanillaContent') &#129106; [BTD_Mod_Helper.Api.Towers.ModVanillaContent&lt;](BTD_Mod_Helper.Api.Towers.ModVanillaContent_T_.md 'BTD_Mod_Helper.Api.Towers.ModVanillaContent<T>')[Il2CppAssets.Scripts.Models.Towers.TowerModel](https://docs.microsoft.com/en-us/dotnet/api/Il2CppAssets.Scripts.Models.Towers.TowerModel 'Il2CppAssets.Scripts.Models.Towers.TowerModel')[&gt;](BTD_Mod_Helper.Api.Towers.ModVanillaContent_T_.md 'BTD_Mod_Helper.Api.Towers.ModVanillaContent<T>') &#129106; ModVanillaTower
-
-Derived  
-&#8627; [ModVanillaTower&lt;T&gt;](BTD_Mod_Helper.Api.Towers.ModVanillaTower_T_.md 'BTD_Mod_Helper.Api.Towers.ModVanillaTower<T>')
 ### Properties
 
 <a name='BTD_Mod_Helper.Api.Towers.ModVanillaTower.Cost'></a>
@@ -35,7 +32,7 @@ public virtual int Cost { get; }
 Change the name of it when it's plural
 
 ```csharp
-public virtual string DisplayNamePlural { get; }
+protected virtual string DisplayNamePlural { get; }
 ```
 
 #### Property Value
@@ -50,7 +47,7 @@ The base id of the Tower that this should modify all TowerModels of
 Use TowerType.[tower]
 
 ```csharp
-public abstract string TowerId { get; }
+protected abstract string TowerId { get; }
 ```
 
 #### Property Value
@@ -63,7 +60,7 @@ public abstract string TowerId { get; }
 Change the TowerSet that this tower is part of. Also handles moving its place within the shop.
 
 ```csharp
-public virtual TowerSet TowerSet { get; }
+protected virtual TowerSet TowerSet { get; }
 ```
 
 #### Property Value

@@ -19,7 +19,7 @@ Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.O
 Changes the base cost
 
 ```csharp
-public virtual int Cost { get; }
+protected virtual int Cost { get; }
 ```
 
 #### Property Value
@@ -34,7 +34,7 @@ The id of the Upgrade that this should modify all TowerModels that use
 Use UpgradeType.[upgrade]
 
 ```csharp
-public abstract string UpgradeId { get; }
+protected abstract string UpgradeId { get; }
 ```
 
 #### Property Value
@@ -48,7 +48,7 @@ public abstract string UpgradeId { get; }
 Change the UpgradeModel for this upgrade
 
 ```csharp
-public virtual void Apply(UpgradeModel upgradeModel);
+protected virtual void Apply(UpgradeModel upgradeModel);
 ```
 #### Parameters
 

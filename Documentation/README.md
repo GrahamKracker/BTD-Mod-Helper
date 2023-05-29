@@ -9,8 +9,6 @@
 
 | Classes | |
 | :--- | :--- |
-| [AdvancedBloonsTD6Mod](BTD_Mod_Helper.AdvancedBloonsTD6Mod.md 'BTD_Mod_Helper.AdvancedBloonsTD6Mod') | A more advanced version of the BloonsTD6Mod Class that has postfixes and prefixes for all hooks, along with instances and all parameters for each patch |
-| [BloonsMod](BTD_Mod_Helper.BloonsMod.md 'BTD_Mod_Helper.BloonsMod') | Expanded version of MelonMod to suit the needs of Bloons games and the Mod Helper |
 | [BloonsTD6Mod](BTD_Mod_Helper.BloonsTD6Mod.md 'BTD_Mod_Helper.BloonsTD6Mod') | Extend this Class instead of MelonMod to gain access to dozens of easy to use built-in hooks |
 | [ModHelper](BTD_Mod_Helper.ModHelper.md 'BTD_Mod_Helper.ModHelper') | Catch-all class for non-extension static methods |
 
@@ -36,7 +34,7 @@
 
 | Interfaces | |
 | :--- | :--- |
-| [IModContent](BTD_Mod_Helper.Api.IModContent.md 'BTD_Mod_Helper.Api.IModContent') | Dummy interface to unite ModContent and BloonsMod |
+| [IModContent](BTD_Mod_Helper.Api.IModContent.md 'BTD_Mod_Helper.Api.IModContent') | Dummy interface to unite ModContent and BloonsTD6Mod |
 
 <a name='BTD_Mod_Helper.Api.Bloons'></a>
 
@@ -97,7 +95,7 @@
 | Classes | |
 | :--- | :--- |
 | [ModMultiTextOverride](BTD_Mod_Helper.Api.Data.ModMultiTextOverride.md 'BTD_Mod_Helper.Api.Data.ModMultiTextOverride') | A bunch of ModTextOverrides that all share the same Active condition and don't require any on the fly determinations of their text |
-| [ModSettings](BTD_Mod_Helper.Api.Data.ModSettings.md 'BTD_Mod_Helper.Api.Data.ModSettings') | Another class outside of the main BloonsMod class that ModSettings can be defined in. Rules other work the same way |
+| [ModSettings](BTD_Mod_Helper.Api.Data.ModSettings.md 'BTD_Mod_Helper.Api.Data.ModSettings') | Another class outside of the main BloonsTD6Mod class that ModSettings can be defined in. Rules other work the same way |
 | [ModTextOverride](BTD_Mod_Helper.Api.Data.ModTextOverride.md 'BTD_Mod_Helper.Api.Data.ModTextOverride') | Class for dynamically overriding In-Game text in a way that's compatible with other mods |
 
 <a name='BTD_Mod_Helper.Api.Display'></a>
@@ -194,6 +192,8 @@
 | [ModHeroLevel&lt;T&gt;](BTD_Mod_Helper.Api.Towers.ModHeroLevel_T_.md 'BTD_Mod_Helper.Api.Towers.ModHeroLevel<T>') | Convenient generic class for specifying the ModHero that this ModHeroLevel is for |
 | [ModParagonUpgrade](BTD_Mod_Helper.Api.Towers.ModParagonUpgrade.md 'BTD_Mod_Helper.Api.Towers.ModParagonUpgrade') | Defines the Paragon Upgrade for a ModTower. Remember to set the [ParagonMode](BTD_Mod_Helper.Api.Towers.ModTower.md#BTD_Mod_Helper.Api.Towers.ModTower.ParagonMode 'BTD_Mod_Helper.Api.Towers.ModTower.ParagonMode') property. |
 | [ModParagonUpgrade&lt;T&gt;](BTD_Mod_Helper.Api.Towers.ModParagonUpgrade_T_.md 'BTD_Mod_Helper.Api.Towers.ModParagonUpgrade<T>') | A convenient generic class for specifying the ModTower that this ModParagonUpgrade is for |
+| [ModSubTower](BTD_Mod_Helper.Api.Towers.ModSubTower.md 'BTD_Mod_Helper.Api.Towers.ModSubTower') | Helper class for making a subtower |
+| [ModSubTower&lt;T&gt;](BTD_Mod_Helper.Api.Towers.ModSubTower_T_.md 'BTD_Mod_Helper.Api.Towers.ModSubTower<T>') | Helper class for making a subtower for a specific other ModTower |
 | [ModTower](BTD_Mod_Helper.Api.Towers.ModTower.md 'BTD_Mod_Helper.Api.Towers.ModTower') | Class for adding a custom Tower to the game. Use alongside [ModUpgrade](BTD_Mod_Helper.Api.Towers.ModUpgrade.md 'BTD_Mod_Helper.Api.Towers.ModUpgrade') to define its upgrades,<br/>and optionally [ModTowerDisplay](BTD_Mod_Helper.Api.Display.ModTowerDisplay.md 'BTD_Mod_Helper.Api.Display.ModTowerDisplay') to define custom displays for it. |
 | [ModTower&lt;T&gt;](BTD_Mod_Helper.Api.Towers.ModTower_T_.md 'BTD_Mod_Helper.Api.Towers.ModTower<T>') | A convenient generic class for specifying the ModTowerSet that a ModTower uses |
 | [ModTowerHelper](BTD_Mod_Helper.Api.Towers.ModTowerHelper.md 'BTD_Mod_Helper.Api.Towers.ModTowerHelper') | Class with helper methods for TowerModels / ModTowers<br/><br/><br/>Mostly used internally |
@@ -204,7 +204,6 @@
 | [ModVanillaContent&lt;T&gt;](BTD_Mod_Helper.Api.Towers.ModVanillaContent_T_.md 'BTD_Mod_Helper.Api.Towers.ModVanillaContent<T>') | ModContent Class for modifying a certain set of vanilla towers |
 | [ModVanillaParagon](BTD_Mod_Helper.Api.Towers.ModVanillaParagon.md 'BTD_Mod_Helper.Api.Towers.ModVanillaParagon') | Dummy ModTower that can be used to make a Paragon for a base tower. |
 | [ModVanillaTower](BTD_Mod_Helper.Api.Towers.ModVanillaTower.md 'BTD_Mod_Helper.Api.Towers.ModVanillaTower') | ModContent class for modifying all TowerModels for a given Tower |
-| [ModVanillaTower&lt;T&gt;](BTD_Mod_Helper.Api.Towers.ModVanillaTower_T_.md 'BTD_Mod_Helper.Api.Towers.ModVanillaTower<T>') | Helper class for changing a vanilla tower to be part of a modded tower set |
 | [ModVanillaUpgrade](BTD_Mod_Helper.Api.Towers.ModVanillaUpgrade.md 'BTD_Mod_Helper.Api.Towers.ModVanillaUpgrade') | ModContent class for modifying all TowerModels that have a given upgrade applied to them |
 
 | Enums | |
@@ -232,7 +231,7 @@
 | [BloonExt](BTD_Mod_Helper.Extensions.BloonExt.md 'BTD_Mod_Helper.Extensions.BloonExt') | Extensions for Bloons |
 | [BloonModelBehaviorExt](BTD_Mod_Helper.Extensions.BloonModelBehaviorExt.md 'BTD_Mod_Helper.Extensions.BloonModelBehaviorExt') | Behavior extensions for BloonModels |
 | [BloonModelExt](BTD_Mod_Helper.Extensions.BloonModelExt.md 'BTD_Mod_Helper.Extensions.BloonModelExt') | Extensions for BloonModels |
-| [BloonsModExt](BTD_Mod_Helper.Extensions.BloonsModExt.md 'BTD_Mod_Helper.Extensions.BloonsModExt') | Extensions for BloonsMods (for some reason lol) |
+| [BloonsTD6ModExt](BTD_Mod_Helper.Extensions.BloonsTD6ModExt.md 'BTD_Mod_Helper.Extensions.BloonsTD6ModExt') | Extensions for BloonsTD6Mods (for some reason lol) |
 | [BloonToSimulationExt](BTD_Mod_Helper.Extensions.BloonToSimulationExt.md 'BTD_Mod_Helper.Extensions.BloonToSimulationExt') | Extensions for the BloonToSimulation |
 | [ButtonClickedEventExt](BTD_Mod_Helper.Extensions.ButtonClickedEventExt.md 'BTD_Mod_Helper.Extensions.ButtonClickedEventExt') | Extensions for ButtonClickedEvents |
 | [ButtonExt](BTD_Mod_Helper.Extensions.ButtonExt.md 'BTD_Mod_Helper.Extensions.ButtonExt') | Extensions for Buttons |
